@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Websouq - Professional Web Developer</title>
+    <title>Websouq - Développement Web Professionnel</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -19,9 +19,19 @@
             overflow-x: hidden;
         }
 
+        /* Color Variables - Orange & White Theme */
+        :root {
+            /* this color text */
+            --primary-orange: #35a7ff;
+            --secondary-orange: #ff8c42;
+            --dark-orange: #e55a2b;
+            --light-orange: #ffb499;
+            --accent-orange: #78b31a;
+        }
+
         /* Animated Background */
         .animated-bg {
-            background: linear-gradient(-45deg, #667eea, #764ba2, #f093fb, #f5576c);
+            background: linear-gradient(-45deg, #3586ff, #ff8c42, #c9c6c4, #6895ff);
             background-size: 400% 400%;
             animation: gradientShift 15s ease infinite;
         }
@@ -48,19 +58,19 @@
         }
 
         @keyframes pulseGlow {
-            0%, 100% { box-shadow: 0 0 20px rgba(102, 126, 234, 0.5); }
-            50% { box-shadow: 0 0 40px rgba(102, 126, 234, 0.8); }
+            0%, 100% { box-shadow: 0 0 20px rgba(255, 107, 53, 0.5); }
+            50% { box-shadow: 0 0 40px rgba(255, 107, 53, 0.8); }
         }
 
         /* Typing Animation */
         .typing {
-            border-right: 3px solid #667eea;
+            border-right: 3px solid var(--primary-orange);
             animation: blink 1s infinite;
         }
 
         @keyframes blink {
             0%, 50% { border-color: transparent; }
-            51%, 100% { border-color: #667eea; }
+            51%, 100% { border-color: var(--primary-orange); }
         }
 
         /* Card Hover Effects */
@@ -71,7 +81,7 @@
 
         .hover-card:hover {
             transform: translateY(-10px) rotateX(5deg);
-            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 25px 50px rgba(255, 107, 53, 0.2);
         }
 
         /* Slide In Animations */
@@ -100,13 +110,13 @@
 
         /* Glowing Text */
         .glow-text {
-            text-shadow: 0 0 10px #667eea, 0 0 20px #667eea, 0 0 30px #667eea;
+            text-shadow: 0 0 10px var(--primary-orange), 0 0 20px var(--primary-orange), 0 0 30px var(--primary-orange);
         }
 
         /* Navigation */
         .nav-backdrop {
             backdrop-filter: blur(20px);
-            background: rgba(255, 255, 255, 0.1);
+            background: rgba(255, 107, 53, 0.1);
         }
 
         /* Particle Container */
@@ -126,7 +136,7 @@
             left: 0;
             width: 100%;
             height: 100px;
-            background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 120' preserveAspectRatio='none'%3E%3Cpath d='M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z' opacity='.25' fill='%23667eea'%3E%3C/path%3E%3Cpath d='M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z' opacity='.5' fill='%23667eea'%3E%3C/path%3E%3Cpath d='M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z' fill='%23667eea'%3E%3C/path%3E%3C/svg%3E");
+            background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 120' preserveAspectRatio='none'%3E%3Cpath d='M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z' opacity='.25' fill='%23ff6b35'%3E%3C/path%3E%3Cpath d='M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z' opacity='.5' fill='%23ff6b35'%3E%3C/path%3E%3Cpath d='M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z' fill='%23ff6b35'%3E%3C/path%3E%3C/svg%3E");
             background-size: cover;
             animation: waveMove 10s linear infinite;
         }
@@ -186,7 +196,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(45deg, #667eea, #764ba2);
+            background: linear-gradient(45deg, var(--primary-orange), var(--secondary-orange));
             z-index: -1;
             transition: opacity 0.3s ease;
             opacity: 0;
@@ -196,22 +206,80 @@
         .btn-magnetic:hover::before {
             opacity: 1;
         }
+
+        /* Video Styles */
+        .video-container {
+            position: relative;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(255, 107, 53, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .video-container:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 30px 60px rgba(255, 107, 53, 0.4);
+        }
+
+        /* Orange Theme Classes */
+        .bg-orange-500 { background-color: var(--primary-orange); }
+        .bg-orange-600 { background-color: var(--dark-orange); }
+        .bg-orange-100 { background-color: #ffebdb; }
+        .text-orange-600 { color: var(--dark-orange); }
+        .text-orange-500 { color: var(--primary-orange); }
+        .border-orange-500 { border-color: var(--primary-orange); }
+
+        /* Scroll Indicator */
+        .scroll-indicator {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(to right, var(--primary-orange), var(--secondary-orange));
+            transform-origin: left;
+            transform: scaleX(0);
+            z-index: 9999;
+        }
+
+        /* Custom Image Styles */
+        .professional-image {
+            border-radius: 15px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .professional-image:hover {
+            transform: scale(1.05);
+            box-shadow: 0 30px 60px rgba(255, 107, 53, 0.2);
+        }
+
+        /* Animation delays */
+        .delay-100 { animation-delay: 0.1s; }
+        .delay-200 { animation-delay: 0.2s; }
+        .delay-300 { animation-delay: 0.3s; }
+        .delay-400 { animation-delay: 0.4s; }
+        .delay-500 { animation-delay: 0.5s; }
     </style>
 </head>
 <body class="bg-gray-50">
+    <!-- Scroll Indicator -->
+    <div class="scroll-indicator"></div>
+
     <!-- Navigation -->
     <nav class="fixed top-0 left-0 right-0 z-50 nav-backdrop">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center py-4">
-                <div class="text-2xl font-bold text-white glow-text">
-                    <i class="fas fa-code mr-2"></i>Websouq
+                <div class="text-2xl font-bold text-white glow-text" style="display: flex; align-items: center;">
+                    <i class="fas fa-code mr-2"></i>Websouq <img src="logo-websouq.jpg" alt="websouq" style="width: 50px; height: 50px; margin-left: 15px; border-radius: 50%; ">
                 </div>
                 <div class="hidden md:flex space-x-8">
-                    <a href="#home" class="nav-link text-white hover:text-blue-300 transition-colors duration-300">Home</a>
-                    <a href="#about" class="nav-link text-white hover:text-blue-300 transition-colors duration-300">About</a>
-                    <a href="#services" class="nav-link text-white hover:text-blue-300 transition-colors duration-300">Services</a>
-                    <a href="#portfolio" class="nav-link text-white hover:text-blue-300 transition-colors duration-300">Portfolio</a>
-                    <a href="#contact" class="nav-link text-white hover:text-blue-300 transition-colors duration-300">Contact</a>
+                    <a href="#home" class="nav-link text-white hover:text-orange-300 transition-colors duration-300">Accueil</a>
+                    <a href="#about" class="nav-link text-white hover:text-orange-300 transition-colors duration-300">À Propos</a>
+                    <a href="#services" class="nav-link text-white hover:text-orange-300 transition-colors duration-300">Services</a>
+                    <a href="#videos" class="nav-link text-white hover:text-orange-300 transition-colors duration-300">Vidéos</a>
+                    <a href="#portfolio" class="nav-link text-white hover:text-orange-300 transition-colors duration-300">Portfolio</a>
+                    <a href="#contact" class="nav-link text-white hover:text-orange-300 transition-colors duration-300">Contact</a>
                 </div>
                 <div class="md:hidden">
                     <button class="mobile-menu-toggle text-white">
@@ -223,11 +291,12 @@
         <!-- Mobile Menu -->
         <div class="mobile-menu hidden md:hidden bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg">
             <div class="px-4 py-2 space-y-2">
-                <a href="#home" class="block text-white hover:text-blue-300 py-2">Home</a>
-                <a href="#about" class="block text-white hover:text-blue-300 py-2">About</a>
-                <a href="#services" class="block text-white hover:text-blue-300 py-2">Services</a>
-                <a href="#portfolio" class="block text-white hover:text-blue-300 py-2">Portfolio</a>
-                <a href="#contact" class="block text-white hover:text-blue-300 py-2">Contact</a>
+                <a href="#home" class="block text-white hover:text-orange-300 py-2">Accueil</a>
+                <a href="#about" class="block text-white hover:text-orange-300 py-2">À Propos</a>
+                <a href="#services" class="block text-white hover:text-orange-300 py-2">Services</a>
+                <a href="#videos" class="block text-white hover:text-orange-300 py-2">Vidéos</a>
+                <a href="#portfolio" class="block text-white hover:text-orange-300 py-2">Portfolio</a>
+                <a href="#contact" class="block text-white hover:text-orange-300 py-2">Contact</a>
             </div>
         </div>
     </nav>
@@ -237,13 +306,13 @@
         <canvas id="particles-canvas"></canvas>
         <div class="text-center text-white relative z-10 px-4">
             <h1 class="text-6xl md:text-8xl font-bold mb-6 slide-in-up glow-text">
-                <span class="typing">I Build High-Quality Websites</span>
+                <span class="typing">Je Crée des Sites Web de Qualité</span>
             </h1>
-            <p class="text-xl md:text-2xl mb-8 slide-in-up max-w-3xl mx-auto" style="animation-delay: 0.3s;">
-                I'm a professional web developer who creates fast, responsive, and visually appealing websites tailored to your business needs.
+            <p class="text-xl md:text-2xl mb-8 slide-in-up max-w-3xl mx-auto delay-300">
+                Je suis un développeur web professionnel qui crée des sites rapides, responsifs et visuellement attrayants adaptés aux besoins de votre entreprise.
             </p>
-            <button class="btn-magnetic bg-white text-blue-600 px-8 py-4 rounded-full text-lg font-semibold hover:bg-blue-50 transition-all duration-300 pulse-glow slide-in-up" style="animation-delay: 0.6s;">
-                <i class="fas fa-rocket mr-2"></i>Get Started
+            <button class="btn-magnetic bg-white text-orange-600 px-8 py-4 rounded-full text-lg font-semibold hover:bg-orange-50 transition-all duration-300 pulse-glow slide-in-up delay-500">
+                <i class="fas fa-rocket mr-2"></i>Commencer
             </button>
         </div>
         <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 text-white floating">
@@ -256,33 +325,75 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 <div class="slide-in-left">
-                    <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-6">About Websouq</h2>
+                    <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-6">À Propos de Websouq</h2>
                     <p class="text-lg text-gray-600 mb-6">
-                        With over 5 years of experience in web development, I specialize in creating modern, responsive websites that not only look stunning but also deliver exceptional user experiences.
+                        Avec plus de 5 ans d'expérience en développement web, je me spécialise dans la création de sites web modernes et responsifs qui non seulement sont visuellement époustouflants mais offrent également des expériences utilisateur exceptionnelles.
                     </p>
                     <div class="grid grid-cols-2 gap-4 mb-6">
                         <div class="stagger-item">
-                            <div class="text-3xl font-bold text-blue-600">50+</div>
-                            <div class="text-gray-600">Projects Completed</div>
+                            <div class="text-3xl font-bold text-orange-600">50+</div>
+                            <div class="text-gray-600">Projets Réalisés</div>
                         </div>
                         <div class="stagger-item">
-                            <div class="text-3xl font-bold text-blue-600">98%</div>
-                            <div class="text-gray-600">Client Satisfaction</div>
+                            <div class="text-3xl font-bold text-orange-600">98%</div>
+                            <div class="text-gray-600">Satisfaction Client</div>
                         </div>
                     </div>
                     <div class="flex flex-wrap gap-3">
-                        <span class="px-4 py-2 bg-blue-100 text-blue-600 rounded-full text-sm font-medium">HTML5</span>
-                        <span class="px-4 py-2 bg-blue-100 text-blue-600 rounded-full text-sm font-medium">CSS3</span>
-                        <span class="px-4 py-2 bg-blue-100 text-blue-600 rounded-full text-sm font-medium">JavaScript</span>
-                        <span class="px-4 py-2 bg-blue-100 text-blue-600 rounded-full text-sm font-medium">React</span>
-                        <span class="px-4 py-2 bg-blue-100 text-blue-600 rounded-full text-sm font-medium">Node.js</span>
+                        <span class="px-4 py-2 bg-orange-100 text-orange-600 rounded-full text-sm font-medium">HTML5</span>
+                        <span class="px-4 py-2 bg-orange-100 text-orange-600 rounded-full text-sm font-medium">CSS3</span>
+                        <span class="px-4 py-2 bg-orange-100 text-orange-600 rounded-full text-sm font-medium">JavaScript</span>
+                        <span class="px-4 py-2 bg-orange-100 text-orange-600 rounded-full text-sm font-medium">React</span>
+                        <span class="px-4 py-2 bg-orange-100 text-orange-600 rounded-full text-sm font-medium">Node.js</span>
                     </div>
                 </div>
                 <div class="slide-in-right">
                     <div class="relative">
-                        <div class="w-80 h-80 mx-auto bg-gradient-to-br from-blue-400 to-purple-600 rounded-full flex items-center justify-center text-white text-6xl floating">
-                            <i class="fas fa-laptop-code"></i>
-                        </div>
+                        <img src="https://images.squarespace-cdn.com/content/v1/52e5df44e4b060b221f994b8/1615768313554-TA86X4BBJ9H8X42CYGMA/D636905C-8E45-4FB4-AACA-90F76DAB9E06.jpg" 
+                             alt="Espace de travail moderne de développeur" 
+                             class="professional-image w-full h-96 object-cover floating">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Videos Section -->
+    <section id="videos" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 slide-in-up">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-6">Découvrez Notre Processus</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Plongez dans notre approche créative et découvrez comment nous transformons vos idées en réalité digitale
+                </p>
+            </div>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <div class="slide-in-left">
+                    <div class="video-container">
+                        <video controls playsinline webkit-playsinline class="w-full h-auto">
+                            <source src="https://dso6.raed.net:447/files/video-websouq.mp4" type="video/mp4">
+                            Votre navigateur ne supporte pas la lecture de vidéos.
+                        </video>
+                    </div>
+                    <div class="mt-6">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-3">Notre Processus Créatif</h3>
+                        <p class="text-gray-600">
+                            Découvrez comment nous concevons et développons des solutions web innovantes qui répondent parfaitement aux besoins de nos clients.
+                        </p>
+                    </div>
+                </div>
+                <div class="slide-in-right">
+                    <div class="video-container">
+                        <video controls playsinline webkit-playsinline class="w-full h-auto">
+                            <source src="https://dso6.raed.net:447/files/vide2-websouq.mp4" type="video/mp4">
+                            Votre navigateur ne supporte pas la lecture de vidéos.
+                        </video>
+                    </div>
+                    <div class="mt-6">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-3">Technologies Avancées</h3>
+                        <p class="text-gray-600">
+                            Explorez les technologies de pointe que nous utilisons pour créer des expériences web exceptionnelles et performantes.
+                        </p>
                     </div>
                 </div>
             </div>
@@ -290,56 +401,104 @@
     </section>
 
     <!-- Services Section -->
-    <section id="services" class="py-20 bg-gray-50">
+    <section id="services" class="py-20 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16 slide-in-up">
-                <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-6">My Services</h2>
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-6">Mes Services</h2>
                 <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                    I offer comprehensive web development services to help your business thrive online
+                    J'offre des services complets de développement web pour aider votre entreprise à prospérer en ligne
                 </p>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="hover-card bg-white p-8 rounded-xl shadow-lg stagger-item">
-                    <div class="text-4xl text-blue-600 mb-4 floating">
+                <div class="hover-card bg-white p-8 rounded-xl shadow-lg stagger-item border-2 border-transparent hover:border-orange-200">
+                    <div class="text-4xl text-orange-600 mb-4 floating">
                         <i class="fas fa-palette"></i>
                     </div>
-                    <h3 class="text-2xl font-bold text-gray-800 mb-4">Web Design</h3>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">Design Web</h3>
                     <p class="text-gray-600 mb-6">
-                        Creating visually stunning and user-friendly designs that capture your brand essence and engage your audience.
+                        Création de designs visuellement époustouflants et conviviaux qui capturent l'essence de votre marque et engagent votre audience.
                     </p>
                     <ul class="text-gray-600 space-y-2">
-                        <li><i class="fas fa-check text-green-500 mr-2"></i>Custom UI/UX Design</li>
-                        <li><i class="fas fa-check text-green-500 mr-2"></i>Mobile-First Approach</li>
-                        <li><i class="fas fa-check text-green-500 mr-2"></i>Brand Integration</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>Design UI/UX Personnalisé</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>Approche Mobile-First</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>Intégration de Marque</li>
                     </ul>
                 </div>
-                <div class="hover-card bg-white p-8 rounded-xl shadow-lg stagger-item">
-                    <div class="text-4xl text-blue-600 mb-4 floating">
+                <div class="hover-card bg-white p-8 rounded-xl shadow-lg stagger-item border-2 border-transparent hover:border-orange-200">
+                    <div class="text-4xl text-orange-600 mb-4 floating">
                         <i class="fas fa-code"></i>
                     </div>
-                    <h3 class="text-2xl font-bold text-gray-800 mb-4">Front-End Development</h3>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">Développement Front-End</h3>
                     <p class="text-gray-600 mb-6">
-                        Building fast, responsive, and interactive websites using the latest technologies and best practices.
+                        Construction de sites web rapides, responsifs et interactifs en utilisant les dernières technologies et meilleures pratiques.
                     </p>
                     <ul class="text-gray-600 space-y-2">
                         <li><i class="fas fa-check text-green-500 mr-2"></i>React & Vue.js</li>
-                        <li><i class="fas fa-check text-green-500 mr-2"></i>Progressive Web Apps</li>
-                        <li><i class="fas fa-check text-green-500 mr-2"></i>Performance Optimization</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>Applications Web Progressives</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>Optimisation des Performances</li>
                     </ul>
                 </div>
-                <div class="hover-card bg-white p-8 rounded-xl shadow-lg stagger-item">
-                    <div class="text-4xl text-blue-600 mb-4 floating">
+                <div class="hover-card bg-white p-8 rounded-xl shadow-lg stagger-item border-2 border-transparent hover:border-orange-200">
+                    <div class="text-4xl text-orange-600 mb-4 floating">
                         <i class="fas fa-search"></i>
                     </div>
-                    <h3 class="text-2xl font-bold text-gray-800 mb-4">SEO Optimization</h3>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">Optimisation SEO</h3>
                     <p class="text-gray-600 mb-6">
-                        Optimizing your website for search engines to improve visibility and drive organic traffic to your business.
+                        Optimisation de votre site web pour les moteurs de recherche afin d'améliorer la visibilité et générer du trafic organique.
                     </p>
                     <ul class="text-gray-600 space-y-2">
-                        <li><i class="fas fa-check text-green-500 mr-2"></i>Technical SEO</li>
-                        <li><i class="fas fa-check text-green-500 mr-2"></i>Page Speed Optimization</li>
-                        <li><i class="fas fa-check text-green-500 mr-2"></i>Schema Markup</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>SEO Technique</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>Optimisation Vitesse de Page</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>Balisage Schema</li>
                     </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="slide-in-left">
+                    <img src="https://wpengine.com/wp-content/uploads/2016/06/design-team-header.png" 
+                         alt="Équipe de développement web collaborative" 
+                         class="professional-image w-full h-96 object-cover">
+                </div>
+                <div class="slide-in-right">
+                    <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-6">Collaboration & Excellence</h2>
+                    <p class="text-lg text-gray-600 mb-6">
+                        Notre approche collaborative garantit que chaque projet bénéficie de l'expertise collective et de l'innovation. Nous travaillons en étroite collaboration avec nos clients pour transformer leurs visions en réalités digitales exceptionnelles.
+                    </p>
+                    <div class="space-y-4">
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center text-white mr-4 floating">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800">Équipe Experte</h4>
+                                <p class="text-gray-600">Développeurs et designers expérimentés</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center text-white mr-4 floating">
+                                <i class="fas fa-lightbulb"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800">Innovation Continue</h4>
+                                <p class="text-gray-600">Utilisation des dernières technologies</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center text-white mr-4 floating">
+                                <i class="fas fa-handshake"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800">Partenariat Client</h4>
+                                <p class="text-gray-600">Communication transparente et continue</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -349,32 +508,32 @@
     <section id="portfolio" class="py-20 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16 slide-in-up">
-                <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-6">My Portfolio</h2>
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-6">Mon Portfolio</h2>
                 <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                    Take a look at some of my recent projects and see the quality of work I deliver
+                    Découvrez quelques-uns de mes projets récents et voyez la qualité du travail que je livre
                 </p>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <div class="portfolio-item hover-card bg-gray-100 rounded-xl overflow-hidden shadow-lg stagger-item">
-                    <div class="h-48 bg-gradient-to-br from-blue-400 to-purple-600 flex items-center justify-center text-white text-4xl">
+                    <div class="h-48 bg-gradient-to-br from-orange-400 to-red-600 flex items-center justify-center text-white text-4xl">
                         <i class="fas fa-shopping-cart"></i>
                     </div>
                     <div class="p-6">
-                        <h3 class="text-xl font-bold text-gray-800 mb-2">E-Commerce Platform</h3>
-                        <p class="text-gray-600 mb-4">Modern online store with seamless checkout experience</p>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Plateforme E-Commerce</h3>
+                        <p class="text-gray-600 mb-4">Boutique en ligne moderne avec expérience de paiement fluide</p>
                         <div class="flex space-x-2">
-                            <span class="px-3 py-1 bg-blue-100 text-blue-600 text-xs rounded-full">React</span>
-                            <span class="px-3 py-1 bg-blue-100 text-blue-600 text-xs rounded-full">Node.js</span>
+                            <span class="px-3 py-1 bg-orange-100 text-orange-600 text-xs rounded-full">React</span>
+                            <span class="px-3 py-1 bg-orange-100 text-orange-600 text-xs rounded-full">Node.js</span>
                         </div>
                     </div>
                 </div>
                 <div class="portfolio-item hover-card bg-gray-100 rounded-xl overflow-hidden shadow-lg stagger-item">
-                    <div class="h-48 bg-gradient-to-br from-green-400 to-blue-600 flex items-center justify-center text-white text-4xl">
+                    <div class="h-48 bg-gradient-to-br from-green-400 to-orange-600 flex items-center justify-center text-white text-4xl">
                         <i class="fas fa-chart-line"></i>
                     </div>
                     <div class="p-6">
-                        <h3 class="text-xl font-bold text-gray-800 mb-2">Analytics Dashboard</h3>
-                        <p class="text-gray-600 mb-4">Data visualization dashboard with real-time updates</p>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Tableau de Bord Analytics</h3>
+                        <p class="text-gray-600 mb-4">Tableau de bord de visualisation de données avec mises à jour en temps réel</p>
                         <div class="flex space-x-2">
                             <span class="px-3 py-1 bg-green-100 text-green-600 text-xs rounded-full">Vue.js</span>
                             <span class="px-3 py-1 bg-green-100 text-green-600 text-xs rounded-full">D3.js</span>
@@ -382,54 +541,15 @@
                     </div>
                 </div>
                 <div class="portfolio-item hover-card bg-gray-100 rounded-xl overflow-hidden shadow-lg stagger-item">
-                    <div class="h-48 bg-gradient-to-br from-purple-400 to-pink-600 flex items-center justify-center text-white text-4xl">
+                    <div class="h-48 bg-gradient-to-br from-purple-400 to-orange-600 flex items-center justify-center text-white text-4xl">
                         <i class="fas fa-mobile-alt"></i>
                     </div>
                     <div class="p-6">
-                        <h3 class="text-xl font-bold text-gray-800 mb-2">Mobile App Landing</h3>
-                        <p class="text-gray-600 mb-4">Responsive landing page for mobile application</p>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Landing Page App Mobile</h3>
+                        <p class="text-gray-600 mb-4">Page d'atterrissage responsive pour application mobile</p>
                         <div class="flex space-x-2">
                             <span class="px-3 py-1 bg-purple-100 text-purple-600 text-xs rounded-full">HTML5</span>
                             <span class="px-3 py-1 bg-purple-100 text-purple-600 text-xs rounded-full">CSS3</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="portfolio-item hover-card bg-gray-100 rounded-xl overflow-hidden shadow-lg stagger-item">
-                    <div class="h-48 bg-gradient-to-br from-yellow-400 to-orange-600 flex items-center justify-center text-white text-4xl">
-                        <i class="fas fa-utensils"></i>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-gray-800 mb-2">Restaurant Website</h3>
-                        <p class="text-gray-600 mb-4">Beautiful restaurant website with online reservation</p>
-                        <div class="flex space-x-2">
-                            <span class="px-3 py-1 bg-yellow-100 text-yellow-600 text-xs rounded-full">WordPress</span>
-                            <span class="px-3 py-1 bg-yellow-100 text-yellow-600 text-xs rounded-full">PHP</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="portfolio-item hover-card bg-gray-100 rounded-xl overflow-hidden shadow-lg stagger-item">
-                    <div class="h-48 bg-gradient-to-br from-red-400 to-purple-600 flex items-center justify-center text-white text-4xl">
-                        <i class="fas fa-graduation-cap"></i>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-gray-800 mb-2">Education Platform</h3>
-                        <p class="text-gray-600 mb-4">Online learning platform with interactive courses</p>
-                        <div class="flex space-x-2">
-                            <span class="px-3 py-1 bg-red-100 text-red-600 text-xs rounded-full">Angular</span>
-                            <span class="px-3 py-1 bg-red-100 text-red-600 text-xs rounded-full">Firebase</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="portfolio-item hover-card bg-gray-100 rounded-xl overflow-hidden shadow-lg stagger-item">
-                    <div class="h-48 bg-gradient-to-br from-teal-400 to-blue-600 flex items-center justify-center text-white text-4xl">
-                        <i class="fas fa-briefcase"></i>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-gray-800 mb-2">Corporate Website</h3>
-                        <p class="text-gray-600 mb-4">Professional corporate website with CMS integration</p>
-                        <div class="flex space-x-2">
-                            <span class="px-3 py-1 bg-teal-100 text-teal-600 text-xs rounded-full">Gatsby</span>
-                            <span class="px-3 py-1 bg-teal-100 text-teal-600 text-xs rounded-full">GraphQL</span>
                         </div>
                     </div>
                 </div>
@@ -441,79 +561,58 @@
     <section id="contact" class="py-20 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16 slide-in-up">
-                <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-6">Get In Touch</h2>
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-6">Prenons Contact</h2>
                 <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                    Ready to start your next project? Let's discuss how I can help bring your vision to life
+                    Prêt à démarrer votre prochain projet ? Discutons de la façon dont je peux aider à donner vie à votre vision
                 </p>
             </div>
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
                 <div class="slide-in-left">
-                    <h3 class="text-2xl font-bold text-gray-800 mb-6">Let's Connect</h3>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-6">Connectons-nous</h3>
                     <div class="space-y-6">
                         <div class="flex items-center">
-                            <div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center text-white mr-4 floating">
+                            <div class="w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center text-white mr-4 floating">
                                 <i class="fas fa-envelope"></i>
                             </div>
                             <div>
                                 <div class="font-semibold text-gray-800">Email</div>
-                                <div class="text-gray-600">fffff@gmail.com</div>
+                                <div class="text-gray-600">contact@websouq.com</div>
                             </div>
                         </div>
                         <div class="flex items-center">
-                            <div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center text-white mr-4 floating">
+                            <div class="w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center text-white mr-4 floating">
                                 <i class="fas fa-phone"></i>
                             </div>
                             <div>
-                                <div class="font-semibold text-gray-800">Phone</div>
-                                <div class="text-gray-600">+2126 69 74 47 40</div>
+                                <div class="font-semibold text-gray-800">Téléphone</div>
+                                <div class="text-gray-600">+212 6 69 74 47 40</div>
                             </div>
                         </div>
                         <div class="flex items-center">
-                            <div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center text-white mr-4 floating">
+                            <div class="w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center text-white mr-4 floating">
                                 <i class="fas fa-map-marker-alt"></i>
                             </div>
                             <div>
-                                <div class="font-semibold text-gray-800">Location</div>
-                                <div class="text-gray-600">Fes</div>
+                                <div class="font-semibold text-gray-800">Localisation</div>
+                                <div class="text-gray-600">Fès, Maroc</div>
                             </div>
                         </div>
                     </div>
                     <div class="mt-8">
-                        <h4 class="text-lg font-semibold text-gray-800 mb-4">Follow Me</h4>
+                        <h4 class="text-lg font-semibold text-gray-800 mb-4">Suivez-moi</h4>
                         <div class="flex space-x-4">
-                            <a href="#" class="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center text-white hover:bg-blue-700 transition-colors floating">
-                                <i class="fab fa-twitter"></i>
-                            </a>
-                            <a href="#" class="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center text-white hover:bg-blue-700 transition-colors floating">
-                                <i class="fab fa-linkedin"></i>
-                            </a>
-                            <a href="#" class="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center text-white hover:bg-blue-700 transition-colors floating">
+                
+                           
+                            <a href="https://github.com/websouqma" class="w-10 h-10 bg-orange-500 rounded-full flex items-center justify-center text-white hover:bg-orange-600 transition-colors floating">
                                 <i class="fab fa-github"></i>
                             </a>
-                            <a href="#" class="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center text-white hover:bg-blue-700 transition-colors floating">
-                                <i class="fab fa-dribbble"></i>
-                            </a>
+                            
                         </div>
                     </div>
                 </div>
                 <div class="slide-in-right">
-                    <form class="bg-white p-8 rounded-xl shadow-lg hover-card">
-                        <div class="mb-6">
-                            <label for="name" class="block text-gray-700 font-medium mb-2">Name</label>
-                            <input type="text" id="name" name="name" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300" placeholder="Your Name" required>
-                        </div>
-                        <div class="mb-6">
-                            <label for="email" class="block text-gray-700 font-medium mb-2">Email</label>
-                            <input type="email" id="email" name="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300" placeholder="your@email.com" required>
-                        </div>
-                        <div class="mb-6">
-                            <label for="message" class="block text-gray-700 font-medium mb-2">Message</label>
-                            <textarea id="message" name="message" rows="5" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300" placeholder="Tell me about your project..." required></textarea>
-                        </div>
-                        <button type="submit" class="w-full btn-magnetic bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition-all duration-300 pulse-glow">
-                            <i class="fas fa-paper-plane mr-2"></i>Send Message
-                        </button>
-                    </form>
+                    <img src="qrcode.png" alt="qrcode" style="width: 250px; ">
+                   
                 </div>
             </div>
         </div>
@@ -531,29 +630,30 @@
                             <i class="fas fa-code mr-2"></i>Websouq
                         </div>
                         <p class="text-gray-300 mb-6 max-w-md">
-                            Creating exceptional web experiences that drive business growth and user engagement. Let's build something amazing together.
+                            Création d'expériences web exceptionnelles qui stimulent la croissance des entreprises et l'engagement des utilisateurs. Construisons quelque chose d'extraordinaire ensemble.
                         </p>
                         <div class="flex space-x-4">
-                            <a href="#" class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center hover:bg-blue-700 transition-all duration-300 floating">
+                            <a href="#" class="w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center hover:bg-orange-600 transition-all duration-300 floating">
                                 <i class="fab fa-twitter"></i>
                             </a>
-                            <a href="#" class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center hover:bg-blue-700 transition-all duration-300 floating">
+                            <a href="#" class="w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center hover:bg-orange-600 transition-all duration-300 floating">
                                 <i class="fab fa-linkedin"></i>
                             </a>
-                            <a href="#" class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center hover:bg-blue-700 transition-all duration-300 floating">
+                            <a href="#" class="w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center hover:bg-orange-600 transition-all duration-300 floating">
                                 <i class="fab fa-github"></i>
                             </a>
-                            <a href="#" class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center hover:bg-blue-700 transition-all duration-300 floating">
+                            <a href="#" class="w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center hover:bg-orange-600 transition-all duration-300 floating">
                                 <i class="fab fa-dribbble"></i>
                             </a>
                         </div>
                     </div>
                     <div>
-                        <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                        <h4 class="text-lg font-semibold mb-4">Liens Rapides</h4>
                         <ul class="space-y-2">
-                            <li><a href="#home" class="text-gray-300 hover:text-white transition-colors duration-300">Home</a></li>
-                            <li><a href="#about" class="text-gray-300 hover:text-white transition-colors duration-300">About</a></li>
+                            <li><a href="#home" class="text-gray-300 hover:text-white transition-colors duration-300">Accueil</a></li>
+                            <li><a href="#about" class="text-gray-300 hover:text-white transition-colors duration-300">À Propos</a></li>
                             <li><a href="#services" class="text-gray-300 hover:text-white transition-colors duration-300">Services</a></li>
+                            <li><a href="#videos" class="text-gray-300 hover:text-white transition-colors duration-300">Vidéos</a></li>
                             <li><a href="#portfolio" class="text-gray-300 hover:text-white transition-colors duration-300">Portfolio</a></li>
                             <li><a href="#contact" class="text-gray-300 hover:text-white transition-colors duration-300">Contact</a></li>
                         </ul>
@@ -561,17 +661,17 @@
                     <div>
                         <h4 class="text-lg font-semibold mb-4">Services</h4>
                         <ul class="space-y-2">
-                            <li><span class="text-gray-300">Web Design</span></li>
-                            <li><span class="text-gray-300">Front-End Development</span></li>
-                            <li><span class="text-gray-300">SEO Optimization</span></li>
-                            <li><span class="text-gray-300">E-Commerce Solutions</span></li>
+                            <li><span class="text-gray-300">Design Web</span></li>
+                            <li><span class="text-gray-300">Développement Front-End</span></li>
+                            <li><span class="text-gray-300">Optimisation SEO</span></li>
+                            <li><span class="text-gray-300">Solutions E-Commerce</span></li>
                             <li><span class="text-gray-300">Maintenance & Support</span></li>
                         </ul>
                     </div>
                 </div>
                 <div class="border-t border-gray-800 mt-12 pt-8 text-center">
                     <p class="text-gray-400">
-                        © 2024 Websouq. All rights reserved. Built with ❤️ and cutting-edge technology.
+                        © 2025 Websouq. Tous droits réservés. Créé avec ❤️ et des technologies de pointe.
                     </p>
                 </div>
             </div>
@@ -583,7 +683,7 @@
         class ParticleSystem {
             constructor(canvas) {
                 this.canvas = canvas;
-                this.ctx = canvas.ctx;
+                this.ctx = canvas.getContext('2d');
                 this.particles = [];
                 this.particleCount = 50;
                 
@@ -657,7 +757,7 @@
                         vy: (Math.random() - 0.5) * 1,
                         size: Math.random() * 2 + 1,
                         opacity: Math.random() * 0.3 + 0.1,
-                        color: `hsl(${Math.random() * 60 + 200}, 70%, 60%)`
+                        color: `hsl(${Math.random() * 30 + 15}, 70%, 60%)`
                     });
                 }
             }
@@ -684,135 +784,158 @@
             }
         }
 
-        // Initialize Particle Systems
+        // Scroll Progress Indicator
+        function updateScrollProgress() {
+            const scrollIndicator = document.querySelector('.scroll-indicator');
+            const scrollProgress = window.pageYOffset / (document.documentElement.scrollHeight - window.innerHeight);
+            scrollIndicator.style.transform = `scaleX(${scrollProgress})`;
+        }
+
+        // Initialize
         document.addEventListener('DOMContentLoaded', function() {
             const particlesCanvas = document.getElementById('particles-canvas');
             const footerCanvas = document.getElementById('footer-particles');
             
             if (particlesCanvas) {
-                particlesCanvas.ctx = particlesCanvas.getContext('2d');
                 new ParticleSystem(particlesCanvas);
             }
             
             if (footerCanvas) {
                 new FooterParticleSystem(footerCanvas);
             }
-        });
 
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
+            // Smooth scrolling for navigation links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
             });
-        });
 
-        // Mobile menu toggle
-        const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
-        const mobileMenu = document.querySelector('.mobile-menu');
+            // Mobile menu toggle
+            const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+            const mobileMenu = document.querySelector('.mobile-menu');
 
-        if (mobileMenuToggle && mobileMenu) {
-            mobileMenuToggle.addEventListener('click', function() {
-                mobileMenu.classList.toggle('hidden');
+            if (mobileMenuToggle && mobileMenu) {
+                mobileMenuToggle.addEventListener('click', function() {
+                    mobileMenu.classList.toggle('hidden');
+                });
+            }
+
+            // Scroll animations
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver(function(entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate-in');
+                    }
+                });
+            }, observerOptions);
+
+            // Observe elements for animation
+            document.querySelectorAll('.slide-in-left, .slide-in-right, .slide-in-up').forEach(el => {
+                observer.observe(el);
             });
-        }
 
-        // Scroll animations
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
+            // Staggered animations
+            const staggerObserver = new IntersectionObserver(function(entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const staggerItems = entry.target.querySelectorAll('.stagger-item');
+                        staggerItems.forEach((item, index) => {
+                            setTimeout(() => {
+                                item.classList.add('animate');
+                            }, index * 150);
+                        });
+                    }
+                });
+            }, observerOptions);
 
-        const observer = new IntersectionObserver(function(entries) {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('animate-in');
-                }
+            document.querySelectorAll('section').forEach(section => {
+                staggerObserver.observe(section);
             });
-        }, observerOptions);
 
-        // Observe elements for animation
-        document.querySelectorAll('.slide-in-left, .slide-in-right, .slide-in-up').forEach(el => {
-            observer.observe(el);
-        });
-
-        // Staggered animations
-        const staggerObserver = new IntersectionObserver(function(entries) {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    const staggerItems = entry.target.querySelectorAll('.stagger-item');
-                    staggerItems.forEach((item, index) => {
-                        setTimeout(() => {
-                            item.classList.add('animate');
-                        }, index * 150);
-                    });
-                }
-            });
-        }, observerOptions);
-
-        document.querySelectorAll('section').forEach(section => {
-            staggerObserver.observe(section);
-        });
-
-        // Form submission
-        const contactForm = document.querySelector('#contact form');
-        if (contactForm) {
-            contactForm.addEventListener('submit', function(e) {
-                e.preventDefault();
-                
-                // Simulate form submission
-                const submitBtn = this.querySelector('button[type="submit"]');
-                const originalText = submitBtn.innerHTML;
-                
-                submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i>Sending...';
-                submitBtn.disabled = true;
-                
-                setTimeout(() => {
-                    submitBtn.innerHTML = '<i class="fas fa-check mr-2"></i>Message Sent!';
-                    submitBtn.classList.remove('bg-blue-600', 'hover:bg-blue-700');
-                    submitBtn.classList.add('bg-green-600');
+            // Form submission
+            const contactForm = document.querySelector('#contact form');
+            if (contactForm) {
+                contactForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    const submitBtn = this.querySelector('button[type="submit"]');
+                    const originalText = submitBtn.innerHTML;
+                    
+                    submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i>Envoi en cours...';
+                    submitBtn.disabled = true;
                     
                     setTimeout(() => {
-                        submitBtn.innerHTML = originalText;
-                        submitBtn.disabled = false;
-                        submitBtn.classList.remove('bg-green-600');
-                        submitBtn.classList.add('bg-blue-600', 'hover:bg-blue-700');
-                        contactForm.reset();
+                        submitBtn.innerHTML = '<i class="fas fa-check mr-2"></i>Message Envoyé !';
+                        submitBtn.classList.remove('bg-orange-500', 'hover:bg-orange-600');
+                        submitBtn.classList.add('bg-green-600');
+                        
+                        setTimeout(() => {
+                            submitBtn.innerHTML = originalText;
+                            submitBtn.disabled = false;
+                            submitBtn.classList.remove('bg-green-600');
+                            submitBtn.classList.add('bg-orange-500', 'hover:bg-orange-600');
+                            contactForm.reset();
+                        }, 2000);
                     }, 2000);
-                }, 2000);
-            });
-        }
+                });
+            }
 
-        // Typing animation
-        const typingElement = document.querySelector('.typing');
-        if (typingElement) {
-            const text = typingElement.textContent;
-            typingElement.textContent = '';
-            
-            let i = 0;
-            const typeWriter = () => {
-                if (i < text.length) {
-                    typingElement.textContent += text.charAt(i);
-                    i++;
-                    setTimeout(typeWriter, 100);
-                }
-            };
-            
-            setTimeout(typeWriter, 1000);
-        }
+            // Typing animation
+            const typingElement = document.querySelector('.typing');
+            if (typingElement) {
+                const text = typingElement.textContent;
+                typingElement.textContent = '';
+                
+                let i = 0;
+                const typeWriter = () => {
+                    if (i < text.length) {
+                        typingElement.textContent += text.charAt(i);
+                        i++;
+                        setTimeout(typeWriter, 100);
+                    }
+                };
+                
+                setTimeout(typeWriter, 1000);
+            }
+
+            // Enhanced magnetic button effect
+            document.querySelectorAll('.btn-magnetic').forEach(btn => {
+                btn.addEventListener('mousemove', function(e) {
+                    const rect = this.getBoundingClientRect();
+                    const x = e.clientX - rect.left - rect.width / 2;
+                    const y = e.clientY - rect.top - rect.height / 2;
+                    
+                    this.style.transform = `translate(${x * 0.1}px, ${y * 0.1}px) scale(1.05)`;
+                });
+                
+                btn.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translate(0, 0) scale(1)';
+                });
+            });
+        });
+
+        // Window scroll handler
+        window.addEventListener('scroll', updateScrollProgress);
 
         // Window resize handler for particles
         window.addEventListener('resize', function() {
             const particlesCanvas = document.getElementById('particles-canvas');
             const footerCanvas = document.getElementById('footer-particles');
             
-            if (particlesCanvas && particlesCanvas.ctx) {
+            if (particlesCanvas) {
                 particlesCanvas.width = window.innerWidth;
                 particlesCanvas.height = window.innerHeight;
             }
@@ -821,21 +944,6 @@
                 footerCanvas.width = footerCanvas.offsetWidth;
                 footerCanvas.height = footerCanvas.offsetHeight;
             }
-        });
-
-        // Enhanced magnetic button effect
-        document.querySelectorAll('.btn-magnetic').forEach(btn => {
-            btn.addEventListener('mousemove', function(e) {
-                const rect = this.getBoundingClientRect();
-                const x = e.clientX - rect.left - rect.width / 2;
-                const y = e.clientY - rect.top - rect.height / 2;
-                
-                this.style.transform = `translate(${x * 0.1}px, ${y * 0.1}px) scale(1.05)`;
-            });
-            
-            btn.addEventListener('mouseleave', function() {
-                this.style.transform = 'translate(0, 0) scale(1)';
-            });
         });
     </script>
 </body>
